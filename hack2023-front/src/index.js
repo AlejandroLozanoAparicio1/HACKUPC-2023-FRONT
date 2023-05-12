@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { PhotoInfoSection } from './components/photoInfoSection/photoInfoSection';
+import Button from './components/shared/Button/button';
 import './index.module.scss';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

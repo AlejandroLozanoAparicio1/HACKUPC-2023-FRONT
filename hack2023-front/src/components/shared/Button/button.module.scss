@@ -1,3 +1,29 @@
+@use '../../../utils/colors.module.scss' as colors;
+
 .button {
-    
+    //remove later
+    margin: 3rem;
+
+    background-color: colors.$dark-green;
+    color: colors.$white;
+    border: none;
+    border-radius: 7px;
+    padding: 0.75rem 1.25rem;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: background-color 200ms ease-in-out;
+
+    &:hover:enabled {
+        cursor: pointer;
+        background-color: darken(colors.$dark-green, 10%);
+    }
+
+    &:active:enabled {
+        transform: scale(0.98);
+    }
+
+    &:disabled {
+        background-color: lighten(colors.$dark-green, 40%);
+        cursor: default;
+    }
 }
