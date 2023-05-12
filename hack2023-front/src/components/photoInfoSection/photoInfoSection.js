@@ -6,9 +6,9 @@ export const PhotoInfoSection = ({ src, alt }) => {
         <div className={styles.container}>
             <img className={styles.image} src={src} alt={alt} />
             <InfoCard
-                roomType={'cocina'}
+                roomType={'Cocina'}
                 features={['sofa', 'mesa', 'tv']}
-                score={3}
+                score={3.32321321}
                 caption={'caption'}
             />
         </div>
