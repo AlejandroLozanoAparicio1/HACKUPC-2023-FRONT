@@ -1,22 +1,20 @@
-import React from 'react';
+import styles from './infoCard.module.scss';
 
 const InfoCard = ({ roomType, features, score, caption }) => {
-  return (
-    <div className="info-card">
-      <h2>{roomType}</h2>
-      <ul>
-        {features.map((feature, index) => (
-          <li key={index}>{feature}</li>
-        ))}
-      </ul>
-      <div>
-        Score: {score}
-      </div>
-      <div>
-        Caption: {caption}
-      </div>
-    </div>
-  );
+    return (
+        <div className={styles.infoCard}>
+            <h2 className={styles.title}>{roomType}</h2>
+            <p className={styles.caption}>{caption}</p>
+            <ul>
+                {features.map((feature, index) => (
+                    <li key={index}>{feature}</li>
+                ))}
+            </ul>
+            <p className={styles.score}>
+                your score is <span>{score}</span>
+            </p>
+        </div>
+    );
 };
 
 export default InfoCard;
