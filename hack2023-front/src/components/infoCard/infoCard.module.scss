@@ -1,15 +1,30 @@
 .infoCard {
     width: fit-content;
+    height: fit-content;
+
+    //change this to center properly
+    margin: 0 auto 0;
     padding: 1rem;
-    margin: 0 auto;
+
     border: 1px solid black;
     border-radius: 3px;
 
     .title {
-        font-size: 3rem;
+        text-align: center;
+        font-size: 4rem;
+        font-weight: 500;
     }
+
     .caption {
-        font-size: 1rem;
+        font-size: 2rem;
+        font-weight: 500;
     }
-    .score {}
+
+    .score {
+        font-size: 2rem;
+        span {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+    }
 }

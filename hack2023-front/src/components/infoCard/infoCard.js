@@ -10,7 +10,9 @@ const InfoCard = ({ roomType, features, score, caption }) => {
                     <li key={index}>{feature}</li>
                 ))}
             </ul>
-            <p className={styles.score}>Score: {score}</p>
+            <p className={styles.score}>
+                your score is <span>{score}</span>
+            </p>
         </div>
     );
 };

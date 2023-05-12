@@ -1,5 +1,8 @@
 .container {
     display: flex;
+    width: 90vw;
+    height: 90vh;
+    margin: 0 auto;
 
     .image {
         object-fit: contain;
