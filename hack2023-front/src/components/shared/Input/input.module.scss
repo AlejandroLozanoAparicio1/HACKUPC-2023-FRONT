@@ -1,0 +1,36 @@
+@use '../../../utils/colors.module.scss' as colors;
+
+.button::-webkit-file-upload-button {
+    visibility: hidden;
+}
+.button {
+    &::before {
+        content: 'Select an image file';
+        display: inline-block;
+        outline: none;
+        white-space: nowrap;
+
+        background-color: colors.$dark-green;
+        border: none;
+        border-radius: 7px;
+        padding: 0.75rem 1.25rem;
+
+        color: colors.$white;
+        font-weight: 500;
+        font-size: 1rem;
+
+        transition: background-color 200ms ease-in-out;
+    }
+
+    -webkit-user-select: none;
+    cursor: pointer;
+
+    &:hover:enabled::before {
+        cursor: pointer;
+        background-color: darken(colors.$dark-green, 10%);
+    }
+
+    &:active:enabled::before {
+        transform: scale(0.98);
+    }
+}

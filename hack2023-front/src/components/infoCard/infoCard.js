@@ -6,7 +6,7 @@ const InfoCard = ({ roomType, features, score, caption }) => {
             <h2 className={styles.title}>{roomType}</h2>
             <p className={styles.caption}>{caption}</p>
             <p className={styles.featuresTitle}>
-                The foto include the following:
+                The foto includes the following:
             </p>
             <ul>
                 {features.map((feature, index) => (
