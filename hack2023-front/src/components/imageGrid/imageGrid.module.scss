@@ -1,0 +1,8 @@
+.imageGrid {
+    max-width: 814px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin: 0 auto;
+    row-gap: 3rem;
+    column-gap: 2rem;
+}
