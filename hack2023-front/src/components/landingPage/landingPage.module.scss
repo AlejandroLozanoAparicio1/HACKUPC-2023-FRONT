@@ -7,6 +7,7 @@
     align-items: center;
     flex-direction: column;
     margin: 0 auto;
+    margin-bottom: 2rem;
 
     h1 {
         text-align: center;
@@ -14,12 +15,14 @@
         font-family: 'Poppins', Arial, Helvetica, sans-serif;
         font-size: 4rem;
         background: -webkit-linear-gradient(colors.$light-green, colors.$dark-green);
-        -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
     }
 
     p {
         text-align: center;
         font-size: 1.1rem;
+        line-height: 1.5rem;
+        font-weight: 400;
     }
 }
