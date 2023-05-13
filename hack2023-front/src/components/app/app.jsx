@@ -1,5 +1,5 @@
-import { useState, useMemo } from 'react';
-import axios from 'axios';
+import { useState, useEffect } from 'react';
+//import axios from 'axios';
 import ImageUploader from '../imageUploader/imageUploader';
 import { PhotoInfoSection } from '../photoInfoSection/photoInfoSection';
 import { toBase64 } from '../../services/toBase64';
@@ -10,11 +10,13 @@ import { Header } from '../header/header';
 export const App = () => {
     const [image, setImage] = useState(null);
 
-    const a = useMemo(() => {
+    useEffect(() => {
         if (image) {
             try {
-                //todo: url of the API
+                console.log(image);
                 const src = toBase64(image);
+                console.log(src);
+                //todo: url of the API
                 //const response = axios.post('/api/upload-image', a);
             } catch (error) {
                 console.log(error);
@@ -27,7 +29,6 @@ export const App = () => {
             <Header />
             <LandingPage />
             <ImageUploader setImage={setImage} />
-            <ImageUrlUploader setImage={setImage} />
             {image && <PhotoInfoSection src={image} alt={''} />}
         </>
     );

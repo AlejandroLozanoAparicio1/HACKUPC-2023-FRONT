@@ -1,11 +1,11 @@
 @use '../../utils/colors.module.scss' as colors;
 
 .header {
+    position: sticky;
     margin: 0 auto;
     margin-top: 1.25rem;
     width: 65%;
     height: 8%;
-    position: sticky;
     z-index: 999;
     top: -10px;
     box-shadow: 1px 1px 20px 1px rgba(200, 200, 200, 0.47);
