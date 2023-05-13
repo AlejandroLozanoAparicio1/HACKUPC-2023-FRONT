@@ -1,27 +1,25 @@
 import { useState, useEffect } from 'react';
-//import axios from 'axios';
 import { PhotoInfoSection } from '../photoInfoSection/photoInfoSection';
-import { toBase64 } from '../../services/toBase64';
 import { LandingPage } from '../landingPage/landingPage';
 import { Header } from '../header/header';
 import styles from './app.module.scss';
 import { Uploaders } from '../uploaders/uploaders';
+import { qualityEnhanceInformation } from '../../services/qualityEnhanceInformation';
 
 export const App = () => {
     const [image, setImage] = useState(null);
 
     useEffect(() => {
-        if (image) {
-            try {
-                console.log(image);
-                //const src = toBase64(image);
-                //console.log(src);
-                //todo: url of the API
-                //const response = axios.post('/api/upload-image', a);
-            } catch (error) {
-                console.log(error);
+        const f = async () => {
+            if (image) {
+                try {
+                    console.log(await qualityEnhanceInformation(image));
+                } catch (error) {
+                    console.log(error);
+                }
             }
-        }
+        };
+        f();
     }, [image]);
 
     return (
