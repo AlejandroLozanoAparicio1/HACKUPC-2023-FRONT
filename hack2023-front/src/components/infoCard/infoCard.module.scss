@@ -19,7 +19,6 @@
 
     .caption {
         font-size: 1.1rem;
-        //font-weight: 500;
         color: colors.$light-gray;
         text-overflow: ellipsis;
         max-lines: 3;
@@ -32,9 +31,28 @@
         color: colors.$black;
     }
 
-    .feature {
-        font-size: 1rem;
-        color: colors.$dark-gray;
+    .features {
+        padding: 0;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 0.25rem;
+        column-gap: 0.4rem;
+
+        .feature {
+            display: inline-flex;
+            list-style-type: none;
+
+            width: fit-content;
+
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: colors.$dark-green;
+
+            border: 2px solid colors.$dark-green;
+            border-radius: 11px;
+            padding: 0.25rem 0.4rem;
+        }
     }
 
     .score {
