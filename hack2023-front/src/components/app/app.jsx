@@ -14,8 +14,8 @@ export const App = () => {
         if (image) {
             try {
                 console.log(image);
-                const src = toBase64(image);
-                console.log(src);
+                //const src = toBase64(image);
+                //console.log(src);
                 //todo: url of the API
                 //const response = axios.post('/api/upload-image', a);
             } catch (error) {
