@@ -1,13 +1,9 @@
 import { API_URL } from '../utils/constants';
 import axios from 'axios';
 
-export const qualityEnhanceInformation = (img) =>
-    axios({
-        method: 'get',
-        url: `${API_URL}/quality/enhance/information?imageUrl=${img}`,
-    }).then((response) => {
-        if (response.ok) {
-            response.json();
-        }
-        throw response;
-    });
+export const qualityEnhanceInformation = async (img) => {
+    const call = await axios.get(
+        `${API_URL}/quality/enhance/information?imageUrl=${img}`
+    );
+    return call;
+};

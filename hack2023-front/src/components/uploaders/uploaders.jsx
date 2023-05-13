@@ -1,10 +1,12 @@
-import ImageUploader from '../imageUploader/imageUploader';
-import styles from './uploaders.module.scss';
-import { ImageUrlUploader } from '../imageUrlUploader/imageUrlUploader';
-import { useState } from 'react';
 import Button from '../shared/Button/button';
+import ImageUploader from '../imageUploader/imageUploader';
+import { ImageUrlUploader } from '../imageUrlUploader/imageUrlUploader';
+import { qualityEnhanceInformation } from '../../services/qualityEnhanceInformation';
+import { qualityEnhanceInformationBase64 } from '../../services/qualityEnhanceInformationBase64';
+import { useState } from 'react';
+import styles from './uploaders.module.scss';
 
-export const Uploaders = ({ setImage }) => {
+export const Uploaders = ({ setImage, setImageInfo }) => {
     const [selectedFile, setSelectedFile] = useState(null);
     const [selectedUrl, setSelectedUrl] = useState('');
     const [error, setError] = useState(null);
@@ -12,9 +14,21 @@ export const Uploaders = ({ setImage }) => {
     const handleFileUpload = async () => {
         if (selectedFile) {
             setImage(selectedFile);
+            try {
+                setImageInfo(
+                    await qualityEnhanceInformationBase64(selectedFile)
+                );
+            } catch (error) {
+                console.log(error);
+            }
         }
         if (selectedUrl) {
             setImage(selectedUrl);
+            try {
+                setImageInfo(await qualityEnhanceInformation(selectedUrl));
+            } catch (error) {
+                console.log(error);
+            }
         }
     };
 
