@@ -6,14 +6,16 @@ import Button from '../shared/Button/button';
 
 export const Uploaders = ({ setImage }) => {
     const [selectedFile, setSelectedFile] = useState(null);
-    const [selectedUrl, setSelectedUrl] = useState(null);
+    const [selectedUrl, setSelectedUrl] = useState('');
     const [error, setError] = useState(null);
 
     const handleFileUpload = async () => {
-        if (!selectedFile) {
-            return;
+        if (selectedFile) {
+            setImage(selectedFile);
         }
-        setImage(selectedFile);
+        if (selectedUrl) {
+            setImage(selectedUrl);
+        }
     };
 
     return (
@@ -34,7 +36,7 @@ export const Uploaders = ({ setImage }) => {
                     type={'button'}
                     label="Upload"
                     onClick={handleFileUpload}
-                    disabled={!selectedFile || error}
+                    disabled={(!selectedFile && !selectedUrl) || error}
                 />
             </div>
             {error && <p> {error} </p>}
