@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import logo from './../../assets/logoHomeScope.png';
 import styles from './header.module.scss';
 import './header.css';
@@ -16,7 +15,7 @@ export const Header = () => {
                 <NavLink exact activeClassName="active" to="/">Home</NavLink>
                 <NavLink activeClassName="active" to="/improve-images">Improve Images</NavLink>
                 <NavLink activeClassName="active" to="/calculate-pricing">Calculate pricing</NavLink>
-                <NavLink activeClassName="active" to="/about">About us</NavLink>
+                <NavLink activeClassName="active" to="/about-us">About us</NavLink>
             </div>
         </div>
     );

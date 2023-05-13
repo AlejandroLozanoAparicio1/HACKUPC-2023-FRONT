@@ -3,6 +3,7 @@ import { PhotoInfoSection } from '../../components/photoInfoSection/photoInfoSec
 import { Header } from '../../components/header/header';
 import styles from './improveImages.module.scss';
 import { Uploaders } from '../../components/uploaders/uploaders';
+import { LandingPage } from '../../components/landingPage/landingPage';
 
 export const ImproveImages = () => {
     const [image, setImage] = useState(null);
@@ -16,6 +17,8 @@ export const ImproveImages = () => {
     return (
         <div >
             <Header />
+            <LandingPage title={ 'Improve images' } titleClass={ styles.alignLeft } description={ 'Descripcion' }/>
+
             <Uploaders setImage={setImage} setImageInfo={setImageInfo} />
             {imageInfo && (
                 <PhotoInfoSection

@@ -1,7 +1,6 @@
 @use '../../utils/colors.module.scss' as colors;
 
 .landingPage {
-    //display: flex;
     justify-content: center;
     width: 65%;
     align-items: center;
@@ -10,10 +9,8 @@
     margin-bottom: 2rem;
 
     h1 {
-        text-align: center;
         padding: 4rem 1rem 1rem 1rem;
         font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        font-size: 4.25rem;
         background: -webkit-linear-gradient(colors.$light-green, colors.$dark-green);
         background-clip: text;
         -webkit-text-fill-color: transparent;

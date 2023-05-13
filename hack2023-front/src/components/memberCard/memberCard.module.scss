@@ -1,0 +1,30 @@
+@use './../../utils/colors.module.scss' as colors;
+
+.memberCardContainer {
+    max-width: 15rem;
+    height: auto;
+
+    padding: 2rem;
+    box-shadow: 1px 1px 20px 1px rgba(200, 200, 200, 0.47);
+    border-radius: 7px;
+
+    display: flex;
+    flex-direction: column;
+    
+
+    img {
+        object-fit: cover;
+        border-radius: 50%;
+        padding-bottom: 1.3rem;
+    }
+
+    h2 {
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 1.3rem;
+    }
+
+    .job {
+        color: colors.$light-gray;
+        padding-bottom: 0.7rem;
+    }
+}

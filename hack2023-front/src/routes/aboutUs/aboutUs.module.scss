@@ -1,0 +1,14 @@
+.alignLeft {
+    text-align: left;
+    font-size: 3rem;
+}
+
+.memberCardsContainer {
+    max-width: 65%;
+    height: auto;
+    margin: 0 auto 10vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

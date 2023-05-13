@@ -4,6 +4,7 @@ import { App } from './routes/app/app';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.module.scss';
 import { ImproveImages } from './routes/improveImages/improveImages';
+import { AboutUs } from './routes/aboutUs/aboutUs';
 
 const router = createBrowserRouter([
     {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
     {
         path: '/improve-images',
         element: <ImproveImages />,
+    },
+    {
+        path: '/about-us',
+        element: <AboutUs />,
     },
 ]);
 
