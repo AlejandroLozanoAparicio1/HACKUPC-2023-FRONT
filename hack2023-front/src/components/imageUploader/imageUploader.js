@@ -1,10 +1,9 @@
 import { useState } from 'react';
-import axios from 'axios';
 import styles from './imageUploader.module.scss';
 import Button from '../shared/Button/button';
 import Input from '../shared/Input/input';
 
-const ImageUploader = () => {
+const ImageUploader = ({ setImage }) => {
     const [selectedFile, setSelectedFile] = useState(null);
     const [error, setError] = useState(null);
 
@@ -23,17 +22,7 @@ const ImageUploader = () => {
         if (!selectedFile) {
             return;
         }
-
-        const formData = new FormData();
-        formData.append('image', selectedFile);
-
-        try {
-            //todo: url of the API
-            const response = await axios.post('/api/upload-image', formData);
-            console.log(response.data);
-        } catch (error) {
-            console.log(error);
-        }
+        setImage(selectedFile);
     };
 
     return (

@@ -38,10 +38,12 @@
 
     .score {
         font-size: 1rem;
+
         span {
             font-size: 2rem;
             font-weight: bold;
             color: colors.$dark-green;
+            font-family: 'Poppins';
         }
     }
 }
