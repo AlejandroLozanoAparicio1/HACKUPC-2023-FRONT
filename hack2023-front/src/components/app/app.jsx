@@ -4,6 +4,8 @@ import ImageUploader from '../imageUploader/imageUploader';
 import { PhotoInfoSection } from '../photoInfoSection/photoInfoSection';
 import { toBase64 } from '../../services/toBase64';
 import { ImageUrlUploader } from '../imageUrlUploader/imageUrlUploader';
+import { LandingPage } from '../landingPage/landingPage';
+import { Header } from '../header/header';
 
 export const App = () => {
     const [image, setImage] = useState(null);
@@ -22,6 +24,8 @@ export const App = () => {
 
     return (
         <>
+            <Header />
+            <LandingPage />
             <ImageUploader setImage={setImage} />
             <ImageUrlUploader setImage={setImage} />
             {image && <PhotoInfoSection src={image} alt={''} />}

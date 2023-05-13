@@ -19,7 +19,7 @@ export const ImageUrlUploader = ({ setImage }) => {
     };
 
     return (
-        <div className={styles.imageUploader}>
+        <div className={styles.imageUrlUploader}>
             <input
                 onChange={handleFileChange}
                 value={selectedFile}
