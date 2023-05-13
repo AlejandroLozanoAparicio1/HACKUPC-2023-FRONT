@@ -1,0 +1,34 @@
+@use '../../utils/colors.module.scss' as colors;
+
+.header {
+    margin: 0 auto;
+    margin-top: 1.25rem;
+    width: 65%;
+    height: 8%;
+    position: sticky;
+    z-index: 999;
+    top: -10px;
+    box-shadow: 1px 1px 20px 1px rgba(200, 200, 200, 0.47);
+    border-radius: 7px;
+    background-color: colors.$light-green;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    .headerContents {
+        display: flex;
+        gap: 1.6rem;
+        margin-right: 2.5rem;
+        font-weight: 500;
+
+        .home {
+            color: colors.$dark-green;
+        }
+    }
+
+    img {
+        margin: 0.6rem 2rem;
+        max-height: 3.5rem;
+    }
+}
+

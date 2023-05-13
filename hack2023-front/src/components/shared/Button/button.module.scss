@@ -1,9 +1,6 @@
 @use '../../../utils/colors.module.scss' as colors;
 
 .button {
-    //remove later
-    margin: 3rem;
-
     background-color: colors.$dark-green;
     color: colors.$white;
     border: none;
