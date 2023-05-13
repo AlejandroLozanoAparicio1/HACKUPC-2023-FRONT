@@ -2,7 +2,7 @@ import styles from './imageUploader.module.scss';
 import Input from '../shared/Input/input';
 
 const ImageUploader = ({ setSelectedFile, setError }) => {
-    const fileReader = new FileReader(); 
+    const fileReader = new FileReader();
 
     const handleFileChange = (event) => {
         const file = event.target.files[0];
@@ -10,11 +10,14 @@ const ImageUploader = ({ setSelectedFile, setError }) => {
         if (!file.type.startsWith('image/')) {
             setError('Please upload an image file.');
         } else {
-            fileReader.addEventListener("load", function () { 
-                setSelectedFile(`data:image/jpeg;base64,${fileReader.result}`);
-                console.log(`data:image/jpeg;base64,${fileReader.result}`);
-            }, false);
-            
+            fileReader.addEventListener(
+                'load',
+                function () {
+                    setSelectedFile(fileReader.result);
+                },
+                false
+            );
+
             fileReader.readAsDataURL(file);
 
             setSelectedFile(file);
