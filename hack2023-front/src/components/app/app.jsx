@@ -1,12 +1,11 @@
 import { useState, useEffect } from 'react';
 //import axios from 'axios';
-import ImageUploader from '../imageUploader/imageUploader';
 import { PhotoInfoSection } from '../photoInfoSection/photoInfoSection';
 import { toBase64 } from '../../services/toBase64';
-import { ImageUrlUploader } from '../imageUrlUploader/imageUrlUploader';
 import { LandingPage } from '../landingPage/landingPage';
 import { Header } from '../header/header';
 import styles from './app.module.scss';
+import { Uploaders } from '../uploaders/uploaders';
 
 export const App = () => {
     const [image, setImage] = useState(null);
@@ -29,12 +28,8 @@ export const App = () => {
         <div className={styles.app}>
             <Header />
             <LandingPage />
-            <div className={ styles.uploaders }>
-                <ImageUploader setImage={setImage} />
-                <p>or</p>
-                <ImageUrlUploader setImage={setImage}></ImageUrlUploader>
-            </div>
-            
+            <Uploaders setImage={setImage} />
+
             {image && <PhotoInfoSection src={image} alt={''} />}
         </div>
     );

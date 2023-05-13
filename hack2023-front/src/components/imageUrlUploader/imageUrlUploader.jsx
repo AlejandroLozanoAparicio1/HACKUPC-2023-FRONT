@@ -1,37 +1,17 @@
-import Input from '../shared/Input/input';
-import Button from '../shared/Button/button';
-import { useState } from 'react';
 import styles from './imageUrlUploader.module.scss';
 
-export const ImageUrlUploader = ({ setImage }) => {
-    const [selectedFile, setSelectedFile] = useState(null);
-    const [error, setError] = useState(null);
-
+export const ImageUrlUploader = ({ selectedUrl, setSelectedUrl }) => {
     const handleFileChange = (event) => {
-        setSelectedFile(event.target.value);
-    };
-
-    const handleFileUpload = async () => {
-        if (!selectedFile) {
-            return;
-        }
-        setImage(selectedFile);
+        setSelectedUrl(event.target.value);
     };
 
     return (
         <div className={styles.imageUrlUploader}>
             <input
                 onChange={handleFileChange}
-                value={selectedFile}
+                value={selectedUrl}
                 type={'text'}
             />
-            <Button
-                type={'button'}
-                label="Upload"
-                onClick={handleFileUpload}
-                disabled={!selectedFile || error != null}
-            />
-            {error && <p> {error} </p>}
         </div>
     );
 };
