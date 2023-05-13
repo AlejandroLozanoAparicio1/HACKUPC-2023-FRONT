@@ -13,10 +13,10 @@ export const PhotoInfoSection = ({
         <div className={styles.container}>
             <img className={styles.image} src={src} alt={alt} />
             <InfoCard
-                roomType={'Living Room'}
+                roomType={ imageInfo.data.room_type_prediction.label }
                 features={imageInfo.data.detections}
-                score={3.32321321}
-                caption={'Officia culpa incididunt consectetur eiusmod ad nisi. Laborum quis ut consectetur ut quis consectetur est et. Sunt nulla consectetur laboris '}
+                score={ imageInfo.data.enhancingDetails.baseScoreImage }
+                caption={ imageInfo.data.caption.description }
                 handleOnChange={handleOnChange}
             />
         </div>
