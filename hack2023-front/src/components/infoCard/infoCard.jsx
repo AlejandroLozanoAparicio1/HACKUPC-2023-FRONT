@@ -7,12 +7,12 @@ const InfoCard = ({ roomType, features, score, caption, handleOnChange }) => {
             <h2 className={styles.title}>{roomType}</h2>
             <p className={styles.caption}>{caption}</p>
             <p className={styles.featuresTitle}>
-                The foto includes the following:
+                Features
             </p>
             <ul>
                 {features.map((feature, index) => (
                     <li className={styles.feature} key={index}>
-                        {feature.label}
+                        {feature.label.replace(/_/g, " ").replace(/\b\w/g, l => l.toUpperCase())}
                     </li>
                 ))}
             </ul>
