@@ -6,6 +6,7 @@ import { toBase64 } from '../../services/toBase64';
 import { ImageUrlUploader } from '../imageUrlUploader/imageUrlUploader';
 import { LandingPage } from '../landingPage/landingPage';
 import { Header } from '../header/header';
+import styles from './app.module.scss';
 
 export const App = () => {
     const [image, setImage] = useState(null);
@@ -23,12 +24,12 @@ export const App = () => {
     }, [image]);
 
     return (
-        <>
+        <div className={styles.app}>
             <Header />
             <LandingPage />
             <ImageUploader setImage={setImage} />
             <ImageUrlUploader setImage={setImage} />
             {image && <PhotoInfoSection src={image} alt={''} />}
-        </>
+        </div>
     );
 };
