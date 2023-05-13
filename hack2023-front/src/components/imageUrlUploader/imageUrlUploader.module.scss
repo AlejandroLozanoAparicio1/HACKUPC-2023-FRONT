@@ -1,7 +1,11 @@
 .imageUrlUploader {
+    display: flex;
+    align-items: center;
     width: 100%;
     justify-content: center;
-    display: flex;
-    margin: 2rem 0;
-    gap: 3rem;
+    padding: 3rem;
+    
+    box-shadow: 1px 1px 20px 1px rgba(200, 200, 200, 0.47);
+    border-radius: 7px;
+    
 }

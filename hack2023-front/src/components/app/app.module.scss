@@ -1,3 +1,12 @@
 .app {
     position: relative;
+
+    .uploaders {
+        margin: 0 auto;
+        margin-top: 1.25rem;
+        width: 65%;
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+    }
 }

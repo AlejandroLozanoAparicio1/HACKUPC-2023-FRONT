@@ -29,7 +29,12 @@ export const App = () => {
         <div className={styles.app}>
             <Header />
             <LandingPage />
-            <ImageUploader setImage={setImage} />
+            <div className={ styles.uploaders }>
+                <ImageUploader setImage={setImage} />
+                <p>or</p>
+                <ImageUrlUploader setImage={setImage}></ImageUrlUploader>
+            </div>
+            
             {image && <PhotoInfoSection src={image} alt={''} />}
         </div>
     );
