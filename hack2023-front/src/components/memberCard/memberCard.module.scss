@@ -1,7 +1,7 @@
 @use './../../utils/colors.module.scss' as colors;
 
 .memberCardContainer {
-    max-width: 15rem;
+    max-width: 25%; //13rem;
     height: auto;
 
     padding: 2rem;
@@ -10,7 +10,6 @@
 
     display: flex;
     flex-direction: column;
-    
 
     img {
         object-fit: cover;

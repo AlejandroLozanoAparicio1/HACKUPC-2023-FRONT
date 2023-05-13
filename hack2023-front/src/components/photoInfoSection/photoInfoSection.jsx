@@ -8,7 +8,6 @@ export const PhotoInfoSection = ({
     alt,
     enhanced,
 }) => {
-    console.log(imageInfo.data);
     return (
         <div className={styles.container}>
             <img
