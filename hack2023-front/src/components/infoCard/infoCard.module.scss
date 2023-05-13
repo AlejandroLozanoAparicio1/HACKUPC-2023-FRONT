@@ -2,10 +2,10 @@
 
 .infoCard {
     width: fit-content;
+    max-width: 40%;
     height: fit-content;
 
-    //change this to center properly
-    margin: 0 auto 0;
+    margin: 0 0;
     padding: 0 3rem;
 
     .descriptionContainer {
@@ -19,7 +19,7 @@
             line-height: 3rem;
             padding: 1.5rem 0;
         }
-    
+
         .caption {
             font-size: 1.1rem;
             color: colors.$light-gray;
@@ -35,24 +35,24 @@
             flex-wrap: wrap;
             row-gap: 0.25rem;
             column-gap: 0.4rem;
-    
+
             .feature {
                 display: inline-flex;
                 list-style-type: none;
-    
+
                 width: fit-content;
-    
+
                 font-size: 0.9rem;
                 font-weight: 600;
                 color: colors.$dark-green;
-    
+
                 border: 2px solid colors.$dark-green;
                 border-radius: 11px;
                 padding: 0.25rem 0.4rem;
             }
         }
     }
-    
+
     .scoreAndButtonContainer {
         max-height: 30%;
 
@@ -73,34 +73,39 @@
                 font-family: 'Poppins';
                 -webkit-text-fill-color: transparent;
                 background-clip: text !important;
-                
+
                 &.redScore {
                     background: -webkit-linear-gradient(red, rgb(102, 0, 0));
                 }
 
-
                 &.orangeScore {
-                    background: -webkit-linear-gradient(orange, rgb(255, 242, 0));
+                    background: -webkit-linear-gradient(
+                        orange,
+                        rgb(255, 242, 0)
+                    );
                 }
 
                 &.greenScore {
-                    background: -webkit-linear-gradient(green, rgb(104, 230, 0));
+                    background: -webkit-linear-gradient(
+                        green,
+                        rgb(104, 230, 0)
+                    );
                 }
             }
         }
-        
+
         .enhanceContainer {
             padding: 2rem;
             display: flex;
             justify-content: center;
             gap: 1.8rem;
             align-items: center;
+            width: fit-content;
 
             p {
                 font-size: 1.3rem;
                 font-weight: 600;
             }
-            
         }
     }
 }
