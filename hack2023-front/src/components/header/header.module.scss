@@ -19,16 +19,13 @@
         display: flex;
         gap: 1.6rem;
         margin-right: 2.5rem;
-        font-weight: 500;
-
-        .home {
-            color: colors.$dark-green;
-        }
+        font-weight: 400;
+        font-size: 1.1rem;
     }
 
     img {
         margin: 0.6rem 2rem;
         max-height: 3.5rem;
-    }
+    }   
 }
 

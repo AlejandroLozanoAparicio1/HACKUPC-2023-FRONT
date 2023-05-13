@@ -1,11 +1,10 @@
 import { useState } from 'react';
-import { PhotoInfoSection } from '../photoInfoSection/photoInfoSection';
-import { LandingPage } from '../landingPage/landingPage';
-import { Header } from '../header/header';
-import styles from './app.module.scss';
-import { Uploaders } from '../uploaders/uploaders';
+import { PhotoInfoSection } from '../../components/photoInfoSection/photoInfoSection';
+import { Header } from '../../components/header/header';
+import styles from './improveImages.module.scss';
+import { Uploaders } from '../../components/uploaders/uploaders';
 
-export const App = () => {
+export const ImproveImages = () => {
     const [image, setImage] = useState(null);
     const [imageInfo, setImageInfo] = useState();
     const [enhanced, setEnhanced] = useState(false);
@@ -15,9 +14,8 @@ export const App = () => {
     };
 
     return (
-        <div className={styles.app}>
+        <div >
             <Header />
-            <LandingPage />
             <Uploaders setImage={setImage} setImageInfo={setImageInfo} />
             {imageInfo && (
                 <PhotoInfoSection
