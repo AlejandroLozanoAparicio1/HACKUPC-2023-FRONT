@@ -34,7 +34,10 @@ export const ImproveImages = () => {
                         alt={''}
                         enhanced={enhanced}
                     />
-                    <ImageGrid title={'References'} images={[]} />
+                    <ImageGrid
+                        title={'References'}
+                        images={imageInfo.data.similiarImages}
+                    />
                 </>
             )}
         </div>

@@ -1,3 +1,5 @@
+@use '../../utils/colors.module.scss' as colors;
+
 .imageGrid {
     max-width: 814px;
     display: grid;
@@ -5,17 +7,20 @@
     margin: 0 auto;
     row-gap: 3rem;
     column-gap: 2rem;
+    padding-bottom: 3rem;
+}
 
-    .title {
-        padding: 3rem 1rem 1rem;
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        text-align: left;
-        font-size: 3rem;
-        background: -webkit-linear-gradient(
-            colors.$light-green,
-            colors.$dark-green
-        );
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
+.title {
+    max-width: 65%;
+    margin: 0 auto;
+    padding: 3rem 1rem 1rem;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    text-align: left;
+    font-size: 3rem;
+    background: -webkit-linear-gradient(
+        colors.$light-green,
+        colors.$dark-green
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
