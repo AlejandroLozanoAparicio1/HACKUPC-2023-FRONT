@@ -21,7 +21,7 @@ export const ImproveImages = () => {
             <LandingPage
                 title={'Improve images'}
                 titleClass={styles.alignLeft}
-                description={'Descripcion'}
+                description={"Our Improve Images page is the heart of our application. Here, you can easily upload photos of your house and watch as our powerful image enhancement algorithms work their magic. Our advanced technology brings out the best in your photos, making them sharper, clearer, and more vibrant than ever before. Plus, once your images have been enhanced, you'll receive valuable information about your home, including its estimated value and other important details. With our Improve Images page, you can finally showcase your home in its best light, and gain a deeper understanding of its true potential. Try it today and see the difference for yourself."}
             />
 
             <Uploaders setImage={setImage} setImageInfo={setImageInfo} />
