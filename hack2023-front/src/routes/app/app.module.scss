@@ -6,3 +6,18 @@
     text-align: center;
     font-size: 4.25rem;
 }
+
+.imageContainer {
+    //max-width: 40%;
+    //max-height: auto;
+
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    
+    img {
+        max-width: 28.5%;
+        height: auto;
+    }
+}
+
